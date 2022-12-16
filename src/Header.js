@@ -1,46 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import { HashLink } from 'react-router-hash-link';
 
 
 
 class Header extends React.Component {
   
-    constructor(props) {
-      super(props);
-      this.state = {
-        name: 'James'
-      }
-    }
   
     render() {
-      const name = this.state.name;
+      
   
       return (
         
-          <div className="header">
+          <div className="header fixed bg-white w-full">
             <div className="wrapper max-w-7xl m-auto px-4">
               <div className="w-full flex justify-between">
                 <div className="text-xl">IBUKI TANAKA</div>
-                <nav className="text-xl ">
-                  <ul class="flex justify-between w-full list-none">
+                <nav className="text-xl w-72">
+                  <ul className="flex justify-between w-full list-none">
                     <li>
-                      <NavLink activeClassName="active" to="/" className="active:text-rose-600">
-                        HOME
-                      </NavLink>
+                     <HashLink smooth to="/home#home">HOME</HashLink>
                     </li>
                     <li>
-                      <NavLink activeClassName="active" to="/skill" className="active:text-rose-600">
-                        SKILL
-                      </NavLink>
+                      <HashLink smooth to="/skill#skill">SKILL</HashLink>
                     </li>
                     <li>
-                       <NavLink activeClassName="active" to="/contact" className="active:text-rose-600">
+                      <HashLink smooth to="/work#work">WORK</HashLink>
+                    </li>
+                    <li>
+                       <NavLink  to="/contact" className="active:text-rose-600">
                         CONTACT
                       </NavLink>
                     </li>
+
                   </ul>
                 </nav>
               </div>

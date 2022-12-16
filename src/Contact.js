@@ -10,7 +10,7 @@ class Contact extends React.Component {
    
     
     render() {
-      const name = this.state.name;
+      
   
       return (
           <div className="skill h-96"> 

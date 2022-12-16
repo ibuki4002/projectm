@@ -3,30 +3,14 @@ import './App.css';
 import React from 'react';
 
 
-class App extends React.Component {
-  
-    constructor(props) {
-      super(props);
-      this.state = {
-        name: 'James'
-      }
-    }
+class Footer extends React.Component {
+
   
     render() {
-      const name = this.state.name;
   
       return (
         <div>
-          <h1>Hello, {name}.</h1>
-          <input
-            type="text"
-            value={name}
-            onChange={ e  => {
-              this.setState({
-                name: e.target.value
-              })
-            }}
-          />
+          <div className="text-center">Copyright © 2007-2022 LIG inc. All Rights Reserved.</div>
         </div>
       );
 
@@ -35,4 +19,4 @@ class App extends React.Component {
  
 }
 
-export default App;
+export default Footer;
